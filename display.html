@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="time"></h1>
+    <h2 id="greetings"></h2>
+    <button onclick="funct()">Click me for time :D</button>
+
+
+</body>
+<script>
+    function funct() {
+        var time = new Date().getHours();
+        var greeting
+        if (time < 12) {
+            greetings = "Goodmorning!"
+            document.body.style.backgroundColor = "lightblue"
+        }
+       else if (time < 16) {
+            greetings = "Good Afternoon"
+            document.body.style.backgroundColor = "orange"
+        }
+      else  if (time < 18) {
+            greetings = "Good Evening!"
+            document.body.style.backgroundColor = "yellow"
+        }
+        else {
+            greetings = "Good Night"
+            document.body.style.backgroundColor= "grey"
+        }
+        document.getElementById("time").innerHTML = time
+        document.getElementById("greetings").innerHTML= greetings
+    }
+
+
+</script>
+
+</html>
